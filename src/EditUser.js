@@ -49,37 +49,38 @@ export default function EditUsers(props) {
         <div>
             <h3 className="page-title mb-4">Edit Existing User</h3>
             {
-                isLoading ? <h1 className="loading">Loading...</h1> : <form onSubmit={handleSubmit}>
-                    <div className="row ">
-                        <div className="col-lg-6 mt-2 mb-2">
-                            <label htmlFor="name">Name</label>
-                            <input type="text" value={name} onChange={(e) => setName(e.target.value)} id="name" className="form-control" />
+                isLoading ? <h1 className="loading">Loading...</h1>
+                    : <form onSubmit={handleSubmit} className="pb-3">
+                        <div className="row ">
+                            <div className="col-lg-6 mt-2 mb-2">
+                                <label htmlFor="name">Name</label>
+                                <input type="text" value={name} onChange={(e) => setName(e.target.value)} id="name" className="form-control" />
+                            </div>
+                            <div className="col-lg-6 mt-2 mb-2">
+                                <label htmlFor="age">Age</label>
+                                <input type="number" value={age} onChange={(e) => setAge(e.target.value)} id="age" className="form-control" />
+                            </div>
                         </div>
-                        <div className="col-lg-6 mt-2 mb-2">
-                            <label htmlFor="age">Age</label>
-                            <input type="number" value={age} onChange={(e) => setAge(e.target.value)} id="age" className="form-control" />
+                        <div className="row">
+                            <div className="col-lg-6 mt-2 mb-2">
+                                <label htmlFor="email">E-mail</label>
+                                <input type="mail" value={email} onChange={(e) => setEmail(e.target.value)} id="email" className="form-control" />
+                            </div>
+                            <div className="col-lg-6 mt-2 mb-2">
+                                <label htmlFor="imgurl">Image Url</label>
+                                <input type="text" value={imgurl} onChange={(e) => setImgurl(e.target.value)} id="imgurl" className="form-control" />
+                            </div>
                         </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-lg-6 mt-2 mb-2">
-                            <label htmlFor="email">E-mail</label>
-                            <input type="mail" value={email} onChange={(e) => setEmail(e.target.value)} id="email" className="form-control" />
+                        <div className="row mb-4">
+                            <div className="col-12 mt-2 mb-2">
+                                <label htmlFor="description">Description</label>
+                                <textarea type="text" value={description} onChange={(e) => setDescription(e.target.value)} id="description" className="form-control" rows="3"></textarea>
+                            </div>
                         </div>
-                        <div className="col-lg-6 mt-2 mb-2">
-                            <label htmlFor="imgurl">Image Url</label>
-                            <input type="text" value={imgurl} onChange={(e) => setImgurl(e.target.value)} id="imgurl" className="form-control" />
+                        <div className="btn-container">
+                            <button className="btn btn-outline-primary btn-container-primary">Update</button>
                         </div>
-                    </div>
-                    <div className="row mb-4">
-                        <div className="col-12 mt-2 mb-2">
-                            <label htmlFor="description">Description</label>
-                            <textarea type="text" value={description} onChange={(e) => setDescription(e.target.value)} id="description" className="form-control" rows="3"></textarea>
-                        </div>
-                    </div>
-                    <div className="btn-container">
-                        <button className="btn btn-outline-primary btn-container-primary">Update</button>
-                    </div>
-                </form>
+                    </form>
             }
 
         </div>

@@ -32,7 +32,7 @@ function CreateUsers() {
             <h3 className="page-title mb-4">Create New User</h3>
             {
                 isLoading ? <h1 className="loading">Loading...</h1>
-                    : (<form onSubmit={handleSubmit}>
+                    : (<form onSubmit={handleSubmit} className="pb-3">
                         <div className="row">
                             <div className="col-lg-6 mt-2 mb-2">
                                 <label htmlFor="name">Name</label>
